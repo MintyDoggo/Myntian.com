@@ -5,6 +5,8 @@ import {AiOutlineClose, AiOutlineMenu, AiOutlineYoutube} from 'react-icons/ai'
 import {SlSocialSpotify} from 'react-icons/Sl'
 import {TbBrandGumroad} from 'react-icons/Tb'
 import {SiBandcamp} from 'react-icons/Si'
+import {FaPatreon} from 'react-icons/Fa'
+
 
 const navbar = () => 
 {
@@ -17,16 +19,16 @@ const navbar = () =>
 
 
   return (
-    <div className='fixed w-full h-20 shadow-xl z-[100]'>
+    <div className='fixed w-full h-40 shadow-xl z-[100] backdrop-blur-[50px] bg-[#00000078]'>
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
             <Image src="/../public/assets/dog.png" alt='/' width='125' height='50' />
             <div>
                 <ul className='hidden md:flex'>
                     <Link href='/'>
-                        <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
+                        <li className='ml-10 uppercase hover:border-b text-2xl'>Home</li>
                     </Link>
-                    <Link href='/'>
-                        <li className='ml-10 text-sm uppercase hover:border-b' href="/posts">Store</li>
+                    <Link href='/store'>
+                        <li className='ml-10 uppercase hover:border-b text-2xl' href="/posts">Store</li>
                     </Link>
                 </ul>
                 <div onClick={handleNav} className='md:hidden cursor-pointer'>
@@ -55,14 +57,14 @@ const navbar = () =>
                 <div>
                     <ul className='uppercase flex flex-col'>
                         <Link href='/'>
-                            <li className='py-4 text-sm hover:border-b'>Home</li>
+                            <li className='py-4 text-sm'>Home</li>
                         </Link>
-                        <Link href='/'>
-                            <li className='py-4 text-sm hover:border-b'>Store</li>
+                        <Link href='/store'>
+                            <li className='py-4 text-sm'>Store</li>
                         </Link>
                     </ul>
                     <div className='pt-40'>
-                        <p className='uppercase tracking-widest text-[#bc7c86]'>some stuff</p>
+                        <p className='uppercase tracking-widest text-[#bc7c86]'>My Socials</p>
                         <div className='flex item-center justify-between my-4 w-full sm:w-[80%]'>
                             <div className='rounded-full shadow-lg shadow-[#000000] p-3 cursor-pointer hover:scale-[103%] ease-in duration-100'>
                                 <a href='https://t.co/jY7BATnj5S' target="_blank">
@@ -82,6 +84,11 @@ const navbar = () =>
                             <div className='rounded-full shadow-lg shadow-[#000000] p-3 cursor-pointer hover:scale-[103%] ease-in duration-100'>
                                 <a href='https://myntian.bandcamp.com/' target="_blank">
                                     <SiBandcamp className=' scale-[150%]'/>
+                                </a>
+                            </div>
+                            <div className='rounded-full shadow-lg shadow-[#000000] p-3 cursor-pointer hover:scale-[103%] ease-in duration-100'>
+                                <a href='https://www.patreon.com/Myntian' target="_blank">
+                                    <FaPatreon className=' scale-[125%]'/>
                                 </a>
                             </div>
                         </div>
